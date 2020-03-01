@@ -10,6 +10,7 @@ import io.mvpstarter.sample.injection.component.AppComponent
 import io.mvpstarter.sample.injection.component.DaggerAppComponent
 import io.mvpstarter.sample.injection.module.AppModule
 import io.mvpstarter.sample.injection.module.NetworkModule
+import io.reactivex.plugins.RxJavaPlugins
 import timber.log.Timber
 
 class MvpStarterApplication : MultiDexApplication() {
@@ -24,13 +25,13 @@ class MvpStarterApplication : MultiDexApplication() {
 
     override fun onCreate() {
         super.onCreate()
-
+        RxJavaPlugins.setErrorHandler {}
         if (BuildConfig.DEBUG) {
             Timber.plant(Timber.DebugTree())
             Stetho.initializeWithDefaults(this)
             LeakCanary.install(this)
             Sherlock.init(this)
-            Traceur.enableLogging()
+            // Traceur.enableLogging()
         }
     }
 
