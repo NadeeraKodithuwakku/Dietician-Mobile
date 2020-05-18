@@ -20,4 +20,4 @@
 }
 
 ####-----Model classes---####
--keep class io.mvpstarter.sample.data.model.** { *; }
+-keep class app.data.model.** { *; }

@@ -21,7 +21,7 @@ allprojects {
     apply plugin: 'kotlin-allopen'
 
     allOpen {
-        annotation 'io.mvpstarter.sample.annotation.OpenClass'
+        annotation 'io.mvpstarter.app.annotation.OpenClass'
     }
 
     repositories {
