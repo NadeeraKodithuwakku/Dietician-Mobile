@@ -6,6 +6,7 @@ import io.mvpstarter.app.features.base.BaseActivity
 import io.mvpstarter.app.features.detail.DetailActivity
 import io.mvpstarter.app.features.main.MainActivity
 import dagger.Subcomponent
+import io.mvpstarter.app.features.home.HomeActivity
 
 @PerActivity
 @Subcomponent(modules = [ActivityModule::class])
@@ -15,4 +16,6 @@ interface ActivityComponent {
     fun inject(mainActivity: MainActivity)
 
     fun inject(detailActivity: DetailActivity)
+
+    fun inject(homeActivity: HomeActivity)
 }

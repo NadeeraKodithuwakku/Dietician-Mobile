@@ -46,7 +46,7 @@ class MainActivity : BaseActivity(), MainMvpView, PokemonAdapter.ClickListener, 
         mainPresenter.getPokemon(POKEMON_COUNT)
     }
 
-    override fun layoutId() = R.layout.fragment_add_plan//R.layout.activity_main
+    override fun layoutId() = R.layout.activity_main//R.layout.activity_main
 
     override fun onDestroy() {
         super.onDestroy()
